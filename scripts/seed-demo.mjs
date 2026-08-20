@@ -91,8 +91,8 @@ async function post(path, body) {
   });
 }
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-const pick = (list) => list[Math.floor(Math.random() * list.length)];
+function sleep(ms) { return new Promise((resolve) => setTimeout(resolve, ms)); }
+function pick(list) { return list[Math.floor(Math.random() * list.length)]; }
 
 function shuffled(list) {
   const copy = [...list];
